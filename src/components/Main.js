@@ -5,7 +5,7 @@ import { Stage, Layer, Star, Rect, Text, Image, Transformer } from 'react-konva'
 import request from "superagent";
 import { UserCount } from '../App';
 import Reset from './Reset';
-import useUndo from 'use-undo';
+//import useUndo from 'use-undo';
 
 
 const URLImage = (props) => {
@@ -125,7 +125,7 @@ const Main = () => {
   const sendAnnotationData = () => {
     request
     .post("/api/sendAnnotationData")
-    .send(localized_data)
+    .send(localized_data.filter((ld, i) => i === 0 || ld[0] >= 0))
     .end((err, res) => {
       if (err) {
         console.error(err);
