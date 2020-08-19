@@ -12,7 +12,8 @@
     "react-konva": "^16.13.0-3",
     "react-scripts": "3.4.1",
     "superagent": "^5.3.1",
-    "use-image": "^1.0.6"
+    "use-image": "^1.0.6",
+    "use-undo": "^1.0.3"
   },
   "scripts": {
     "start": "react-scripts start",
